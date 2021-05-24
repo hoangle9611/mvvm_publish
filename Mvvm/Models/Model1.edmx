@@ -1,0 +1,1424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BeTongModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="200" />
+          <Property Name="Address" Type="nchar" MaxLength="200" />
+          <Property Name="PhoneNumber" Type="nchar" MaxLength="20" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompanyPhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CustomerAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="CustomerPhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="RecipeName" Type="nvarchar" MaxLength="20" />
+          <Property Name="AggRate1" Type="float" />
+          <Property Name="AggRate2" Type="float" />
+          <Property Name="AggRate3" Type="float" />
+          <Property Name="AggRate4" Type="float" />
+          <Property Name="CementRate1" Type="float" />
+          <Property Name="CementRate2" Type="float" />
+          <Property Name="CementRate3" Type="float" />
+          <Property Name="WaterRate" Type="float" />
+          <Property Name="AddRate1" Type="float" />
+          <Property Name="AddRate2" Type="float" />
+          <Property Name="SlumpRate" Type="nvarchar" MaxLength="20" />
+          <Property Name="Humidity1" Type="float" />
+          <Property Name="Humidity2" Type="float" />
+          <Property Name="Humidity3" Type="float" />
+          <Property Name="Humidity4" Type="float" />
+          <Property Name="AggActual1" Type="float" />
+          <Property Name="AggActual2" Type="float" />
+          <Property Name="AggActual3" Type="float" />
+          <Property Name="AggActual4" Type="float" />
+          <Property Name="CementActual1" Type="float" />
+          <Property Name="CementActual2" Type="float" />
+          <Property Name="CementActual3" Type="float" />
+          <Property Name="WaterActual" Type="float" />
+          <Property Name="AddActual1" Type="float" />
+          <Property Name="AddActual2" Type="float" />
+          <Property Name="TruckNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="float" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="WorkPlace" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Deliverydetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeliveryID" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="AggWeight1" Type="float" />
+          <Property Name="AggWeight2" Type="float" />
+          <Property Name="AggWeight3" Type="float" />
+          <Property Name="AggWeight4" Type="float" />
+          <Property Name="CementWeight1" Type="float" />
+          <Property Name="CementWeight2" Type="float" />
+          <Property Name="CementWeight3" Type="float" />
+          <Property Name="WaterWeight" Type="float" />
+          <Property Name="AddWeight1" Type="float" />
+          <Property Name="AddWeight2" Type="float" />
+        </EntityType>
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="50" />
+          <Property Name="BirthDay" Type="date" />
+          <Property Name="Number" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Name">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AggName1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AggName2" Type="nvarchar" MaxLength="50" />
+          <Property Name="AggName3" Type="nvarchar" MaxLength="50" />
+          <Property Name="AggName4" Type="nvarchar" MaxLength="50" />
+          <Property Name="CementName1" Type="nvarchar" MaxLength="50" />
+          <Property Name="CementName2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CementName3" Type="nvarchar" MaxLength="50" />
+          <Property Name="CementName4" Type="nvarchar" MaxLength="50" />
+          <Property Name="WaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddName1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddName2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="AggRate1" Type="float" />
+          <Property Name="AggRate2" Type="float" />
+          <Property Name="AggRate3" Type="float" />
+          <Property Name="AggRate4" Type="float" />
+          <Property Name="CementRate1" Type="float" />
+          <Property Name="CementRate2" Type="float" />
+          <Property Name="CementRate3" Type="float" />
+          <Property Name="WaterRate" Type="float" />
+          <Property Name="AddRate1" Type="float" />
+          <Property Name="AddRate2" Type="float" />
+          <Property Name="SlumpRate" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TagAddress">
+          <Key>
+            <PropertyRef Name="Address" />
+          </Key>
+          <Property Name="Address" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Note" Type="nchar" MaxLength="30" />
+          <Property Name="typedata" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_per_relationship">
+          <Key>
+            <PropertyRef Name="id_rel" />
+          </Key>
+          <Property Name="id_rel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_user_rel" Type="int" Nullable="false" />
+          <Property Name="id_per_rel" Type="int" Nullable="false" />
+          <Property Name="suspended" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_permision">
+          <Key>
+            <PropertyRef Name="id_per" />
+          </Key>
+          <Property Name="id_per" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_per" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbl_permision_detail">
+          <Key>
+            <PropertyRef Name="id_pd" />
+          </Key>
+          <Property Name="id_pd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_action" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="code_action" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_per" Type="int" Nullable="false" />
+          <Property Name="check_action" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_user">
+          <Key>
+            <PropertyRef Name="id_user" />
+          </Key>
+          <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_user" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Truck">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TruckNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="TruckLoad" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_Deliverydetail_Delivery">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="0..1" />
+          <End Role="Deliverydetail" Type="Self.Deliverydetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Deliverydetail">
+              <PropertyRef Name="DeliveryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_per_relationship_tbl_permision">
+          <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+          <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_permision">
+              <PropertyRef Name="id_per" />
+            </Principal>
+            <Dependent Role="tbl_per_relationship">
+              <PropertyRef Name="id_per_rel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_per_relationship_tbl_user">
+          <End Role="tbl_user" Type="Self.tbl_user" Multiplicity="1" />
+          <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_user">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="tbl_per_relationship">
+              <PropertyRef Name="id_user_rel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_permision_detail_tbl_permision">
+          <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+          <End Role="tbl_permision_detail" Type="Self.tbl_permision_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_permision">
+              <PropertyRef Name="id_per" />
+            </Principal>
+            <Dependent Role="tbl_permision_detail">
+              <PropertyRef Name="id_per" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="back_up_database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="namefile" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="insert_Phan_quyen_Permision_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_per" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Restore_database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="namefile" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="select_check_action_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_user" Type="int" Mode="In" />
+          <Parameter Name="licened" Type="bit" Mode="In" />
+          <Parameter Name="code_action" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Select_company" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Delivery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Delivery_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Driver" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_IDuser_with_username_pass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Select_name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="select_Name_action_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="User_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="licened" Type="bit" Mode="In" />
+          <Parameter Name="check_action" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="select_Name_permision_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_user" Type="int" Mode="In" />
+          <Parameter Name="licened" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="Select_PerDetail_DescripionPermision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Select_permision_decription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Phan_quyen_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_user" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Select_Phan_quyen_Permision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="permision" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Select_Recipe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_recipe_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Select_tagaddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_truck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_User_with_username" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username_" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Update_permision_relaytionship" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="id_user" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="update_permistion_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_pd" Type="int" Mode="In" />
+          <Parameter Name="name_action" Type="nvarchar" Mode="In" />
+          <Parameter Name="check_action" Type="bit" Mode="In" />
+        </Function>
+        <EntityContainer Name="BeTongModelStoreContainer">
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Config" EntityType="Self.Config" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deliverydetail" EntityType="Self.Deliverydetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Name" EntityType="Self.Name" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recipe" EntityType="Self.Recipe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TagAddress" EntityType="Self.TagAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_per_relationship" EntityType="Self.tbl_per_relationship" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_permision" EntityType="Self.tbl_permision" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_permision_detail" EntityType="Self.tbl_permision_detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Truck" EntityType="Self.Truck" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Deliverydetail_Delivery" Association="Self.FK_Deliverydetail_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="Deliverydetail" EntitySet="Deliverydetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_per_relationship_tbl_permision" Association="Self.FK_tbl_per_relationship_tbl_permision">
+            <End Role="tbl_permision" EntitySet="tbl_permision" />
+            <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_per_relationship_tbl_user" Association="Self.FK_tbl_per_relationship_tbl_user">
+            <End Role="tbl_user" EntitySet="tbl_user" />
+            <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_permision_detail_tbl_permision" Association="Self.FK_tbl_permision_detail_tbl_permision">
+            <End Role="tbl_permision" EntitySet="tbl_permision" />
+            <End Role="tbl_permision_detail" EntitySet="tbl_permision_detail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BeTongModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="c" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="back_up_database">
+          <Parameter Name="namefile" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="insert_Phan_quyen_Permision_detail">
+          <Parameter Name="id_per" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Restore_database">
+          <Parameter Name="namefile" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="select_check_action_for_login" ReturnType="Collection(Boolean)">
+            <Parameter Name="Id_user" Mode="In" Type="Int32" />
+            <Parameter Name="licened" Mode="In" Type="Boolean" />
+            <Parameter Name="code_action" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Select_company" ReturnType="Collection(BeTongModel.Select_company_Result)" />
+          <FunctionImport Name="Select_Customer" ReturnType="Collection(BeTongModel.Select_Customer_Result)" />
+          <FunctionImport Name="Select_Delivery" ReturnType="Collection(BeTongModel.Select_Delivery_Result)" />
+          <FunctionImport Name="Select_Delivery_detail" ReturnType="Collection(BeTongModel.Select_Delivery_detail_Result)" />
+          <FunctionImport Name="Select_Driver" ReturnType="Collection(BeTongModel.Select_Driver_Result)" />
+          <FunctionImport Name="Select_IDuser_with_username_pass" ReturnType="Collection(Int32)">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Select_name" ReturnType="Collection(BeTongModel.Select_name_Result)" />
+          <FunctionImport Name="select_Name_action_for_login" ReturnType="Collection(String)">
+            <Parameter Name="User_name" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="licened" Mode="In" Type="Boolean" />
+            <Parameter Name="check_action" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="select_Name_permision_for_login" ReturnType="Collection(String)">
+            <Parameter Name="Id_user" Mode="In" Type="Int32" />
+            <Parameter Name="licened" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="Select_PerDetail_DescripionPermision" ReturnType="Collection(BeTongModel.Select_PerDetail_DescripionPermision_Result)">
+          <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Select_permision_decription" ReturnType="Collection(BeTongModel.Select_permision_decription_Result)" />
+          <FunctionImport Name="Select_Phan_quyen_ID" ReturnType="Collection(BeTongModel.Select_Phan_quyen_ID_Result)">
+          <Parameter Name="Id_user" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Select_Phan_quyen_Permision" ReturnType="Collection(BeTongModel.Select_Phan_quyen_Permision_Result)">
+          <Parameter Name="permision" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Select_Recipe" ReturnType="Collection(BeTongModel.Select_Recipe_Result)" />
+          <FunctionImport Name="Select_recipe_Id" ReturnType="Collection(BeTongModel.Select_recipe_Id_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Select_tagaddress" ReturnType="Collection(BeTongModel.Select_tagaddress_Result)" />
+          <FunctionImport Name="Select_truck" ReturnType="Collection(BeTongModel.Select_truck_Result)" />
+          <FunctionImport Name="Select_User_with_username" ReturnType="Collection(BeTongModel.Select_User_with_username_Result)">
+          <Parameter Name="username_" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Update_permision_relaytionship">
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="id_user" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="update_permistion_detail">
+            <Parameter Name="id_pd" Mode="In" Type="Int32" />
+            <Parameter Name="name_action" Mode="In" Type="String" />
+            <Parameter Name="check_action" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BeTongModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BeTongModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Companies" EntityType="BeTongModel.Company" />
+          <EntitySet Name="Configs" EntityType="BeTongModel.Config" />
+          <EntitySet Name="Customers" EntityType="BeTongModel.Customer" />
+          <EntitySet Name="Deliveries" EntityType="BeTongModel.Delivery" />
+          <EntitySet Name="Deliverydetails" EntityType="BeTongModel.Deliverydetail" />
+          <EntitySet Name="Drivers" EntityType="BeTongModel.Driver" />
+          <EntitySet Name="Names" EntityType="BeTongModel.Name" />
+          <EntitySet Name="Recipes" EntityType="BeTongModel.Recipe" />
+          <EntitySet Name="sysdiagrams" EntityType="BeTongModel.sysdiagram" />
+          <EntitySet Name="TagAddresses" EntityType="BeTongModel.TagAddress" />
+          <EntitySet Name="tbl_per_relationship" EntityType="BeTongModel.tbl_per_relationship" />
+          <EntitySet Name="tbl_permision" EntityType="BeTongModel.tbl_permision" />
+          <EntitySet Name="tbl_permision_detail" EntityType="BeTongModel.tbl_permision_detail" />
+          <EntitySet Name="tbl_user" EntityType="BeTongModel.tbl_user" />
+          <EntitySet Name="Trucks" EntityType="BeTongModel.Truck" />
+          <AssociationSet Name="FK_Deliverydetail_Delivery" Association="BeTongModel.FK_Deliverydetail_Delivery">
+            <End Role="Delivery" EntitySet="Deliveries" />
+            <End Role="Deliverydetail" EntitySet="Deliverydetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_per_relationship_tbl_permision" Association="BeTongModel.FK_tbl_per_relationship_tbl_permision">
+            <End Role="tbl_permision" EntitySet="tbl_permision" />
+            <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_per_relationship_tbl_user" Association="BeTongModel.FK_tbl_per_relationship_tbl_user">
+            <End Role="tbl_user" EntitySet="tbl_user" />
+            <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_permision_detail_tbl_permision" Association="BeTongModel.FK_tbl_permision_detail_tbl_permision">
+            <End Role="tbl_permision" EntitySet="tbl_permision" />
+            <End Role="tbl_permision_detail" EntitySet="tbl_permision_detail" />
+          </AssociationSet>
+        </EntityContainer>
+        <ComplexType Name="Select_company_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Note" Nullable="true" MaxLength="200" />
+        </ComplexType>
+        <ComplexType Name="Select_Customer_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Select_Delivery_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CompanyAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CompanyPhoneNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CustomerPhoneNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RecipeName" Nullable="true" MaxLength="20" />
+          <Property Type="Double" Name="AggRate1" Nullable="true" />
+          <Property Type="Double" Name="AggRate2" Nullable="true" />
+          <Property Type="Double" Name="AggRate3" Nullable="true" />
+          <Property Type="Double" Name="AggRate4" Nullable="true" />
+          <Property Type="Double" Name="CementRate1" Nullable="true" />
+          <Property Type="Double" Name="CementRate2" Nullable="true" />
+          <Property Type="Double" Name="CementRate3" Nullable="true" />
+          <Property Type="Double" Name="WaterRate" Nullable="true" />
+          <Property Type="Double" Name="AddRate1" Nullable="true" />
+          <Property Type="Double" Name="AddRate2" Nullable="true" />
+          <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="20" />
+          <Property Type="Double" Name="Humidity1" Nullable="true" />
+          <Property Type="Double" Name="Humidity2" Nullable="true" />
+          <Property Type="Double" Name="Humidity3" Nullable="true" />
+          <Property Type="Double" Name="Humidity4" Nullable="true" />
+          <Property Type="Double" Name="AggActual1" Nullable="true" />
+          <Property Type="Double" Name="AggActual2" Nullable="true" />
+          <Property Type="Double" Name="AggActual3" Nullable="true" />
+          <Property Type="Double" Name="AggActual4" Nullable="true" />
+          <Property Type="Double" Name="CementActual1" Nullable="true" />
+          <Property Type="Double" Name="CementActual2" Nullable="true" />
+          <Property Type="Double" Name="CementActual3" Nullable="true" />
+          <Property Type="Double" Name="WaterActual" Nullable="true" />
+          <Property Type="Double" Name="AddActual1" Nullable="true" />
+          <Property Type="Double" Name="AddActual2" Nullable="true" />
+          <Property Type="String" Name="TruckNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DriverName" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="Unit" Nullable="true" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="String" Name="WorkPlace" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Select_Delivery_detail_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="DeliveryID" Nullable="true" />
+          <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Double" Name="AggWeight1" Nullable="true" />
+          <Property Type="Double" Name="AggWeight2" Nullable="true" />
+          <Property Type="Double" Name="AggWeight3" Nullable="true" />
+          <Property Type="Double" Name="AggWeight4" Nullable="true" />
+          <Property Type="Double" Name="CementWeight1" Nullable="true" />
+          <Property Type="Double" Name="CementWeight2" Nullable="true" />
+          <Property Type="Double" Name="CementWeight3" Nullable="true" />
+          <Property Type="Double" Name="WaterWeight" Nullable="true" />
+          <Property Type="Double" Name="AddWeight1" Nullable="true" />
+          <Property Type="Double" Name="AddWeight2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Select_Driver_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+          <Property Type="String" Name="Number" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="Select_name_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="AggName1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AggName2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AggName3" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AggName4" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CementName1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CementName2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CementName3" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CementName4" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WaterName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AddName1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AddName2" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Select_PerDetail_DescripionPermision_Result">
+          <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="check_action" Nullable="false" />
+          <Property Type="Int32" Name="id_pd" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Select_permision_decription_Result">
+          <Property Type="Int32" Name="id_per" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="Select_Phan_quyen_ID_Result">
+          <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="check_action" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Select_Phan_quyen_Permision_Result">
+          <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="check_action" Nullable="false" />
+          <Property Type="Int32" Name="id_pd" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Select_Recipe_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="AggRate1" Nullable="true" />
+          <Property Type="Double" Name="AggRate2" Nullable="true" />
+          <Property Type="Double" Name="AggRate3" Nullable="true" />
+          <Property Type="Double" Name="AggRate4" Nullable="true" />
+          <Property Type="Double" Name="CementRate1" Nullable="true" />
+          <Property Type="Double" Name="CementRate2" Nullable="true" />
+          <Property Type="Double" Name="CementRate3" Nullable="true" />
+          <Property Type="Double" Name="WaterRate" Nullable="true" />
+          <Property Type="Double" Name="AddRate1" Nullable="true" />
+          <Property Type="Double" Name="AddRate2" Nullable="true" />
+          <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Select_recipe_Id_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="AggRate1" Nullable="true" />
+          <Property Type="Double" Name="AggRate2" Nullable="true" />
+          <Property Type="Double" Name="AggRate3" Nullable="true" />
+          <Property Type="Double" Name="AggRate4" Nullable="true" />
+          <Property Type="Double" Name="CementRate1" Nullable="true" />
+          <Property Type="Double" Name="CementRate2" Nullable="true" />
+          <Property Type="Double" Name="CementRate3" Nullable="true" />
+          <Property Type="Double" Name="WaterRate" Nullable="true" />
+          <Property Type="Double" Name="AddRate1" Nullable="true" />
+          <Property Type="Double" Name="AddRate2" Nullable="true" />
+          <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Select_tagaddress_Result">
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Note" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="typedata" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="Select_truck_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="TruckNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TruckLoad" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="Select_User_with_username_Result">
+          <Property Type="Int32" Name="id_user" Nullable="false" />
+          <Property Type="String" Name="name_user" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="user_name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="pass" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RecipeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AggRate1" Type="Double" />
+          <Property Name="AggRate2" Type="Double" />
+          <Property Name="AggRate3" Type="Double" />
+          <Property Name="AggRate4" Type="Double" />
+          <Property Name="CementRate1" Type="Double" />
+          <Property Name="CementRate2" Type="Double" />
+          <Property Name="CementRate3" Type="Double" />
+          <Property Name="WaterRate" Type="Double" />
+          <Property Name="AddRate1" Type="Double" />
+          <Property Name="AddRate2" Type="Double" />
+          <Property Name="SlumpRate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Humidity1" Type="Double" />
+          <Property Name="Humidity2" Type="Double" />
+          <Property Name="Humidity3" Type="Double" />
+          <Property Name="Humidity4" Type="Double" />
+          <Property Name="AggActual1" Type="Double" />
+          <Property Name="AggActual2" Type="Double" />
+          <Property Name="AggActual3" Type="Double" />
+          <Property Name="AggActual4" Type="Double" />
+          <Property Name="CementActual1" Type="Double" />
+          <Property Name="CementActual2" Type="Double" />
+          <Property Name="CementActual3" Type="Double" />
+          <Property Name="WaterActual" Type="Double" />
+          <Property Name="AddActual1" Type="Double" />
+          <Property Name="AddActual2" Type="Double" />
+          <Property Name="TruckNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DriverName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Double" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="WorkPlace" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Deliverydetails" Relationship="BeTongModel.FK_Deliverydetail_Delivery" FromRole="Delivery" ToRole="Deliverydetail" />
+        </EntityType>
+        <EntityType Name="Deliverydetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeliveryID" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="AggWeight1" Type="Double" />
+          <Property Name="AggWeight2" Type="Double" />
+          <Property Name="AggWeight3" Type="Double" />
+          <Property Name="AggWeight4" Type="Double" />
+          <Property Name="CementWeight1" Type="Double" />
+          <Property Name="CementWeight2" Type="Double" />
+          <Property Name="CementWeight3" Type="Double" />
+          <Property Name="WaterWeight" Type="Double" />
+          <Property Name="AddWeight1" Type="Double" />
+          <Property Name="AddWeight2" Type="Double" />
+          <NavigationProperty Name="Delivery" Relationship="BeTongModel.FK_Deliverydetail_Delivery" FromRole="Deliverydetail" ToRole="Delivery" />
+        </EntityType>
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="BirthDay" Type="DateTime" Precision="0" />
+          <Property Name="Number" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Name">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AggName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AggName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AggName3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AggName4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CementName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CementName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CementName3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CementName4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AggRate1" Type="Double" />
+          <Property Name="AggRate2" Type="Double" />
+          <Property Name="AggRate3" Type="Double" />
+          <Property Name="AggRate4" Type="Double" />
+          <Property Name="CementRate1" Type="Double" />
+          <Property Name="CementRate2" Type="Double" />
+          <Property Name="CementRate3" Type="Double" />
+          <Property Name="WaterRate" Type="Double" />
+          <Property Name="AddRate1" Type="Double" />
+          <Property Name="AddRate2" Type="Double" />
+          <Property Name="SlumpRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TagAddress">
+          <Key>
+            <PropertyRef Name="Address" />
+          </Key>
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="typedata" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_per_relationship">
+          <Key>
+            <PropertyRef Name="id_rel" />
+          </Key>
+          <Property Name="id_rel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_user_rel" Type="Int32" Nullable="false" />
+          <Property Name="id_per_rel" Type="Int32" Nullable="false" />
+          <Property Name="suspended" Type="Boolean" />
+          <NavigationProperty Name="tbl_permision" Relationship="BeTongModel.FK_tbl_per_relationship_tbl_permision" FromRole="tbl_per_relationship" ToRole="tbl_permision" />
+          <NavigationProperty Name="tbl_user" Relationship="BeTongModel.FK_tbl_per_relationship_tbl_user" FromRole="tbl_per_relationship" ToRole="tbl_user" />
+        </EntityType>
+        <EntityType Name="tbl_permision">
+          <Key>
+            <PropertyRef Name="id_per" />
+          </Key>
+          <Property Name="id_per" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_per" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_per_relationship" Relationship="BeTongModel.FK_tbl_per_relationship_tbl_permision" FromRole="tbl_permision" ToRole="tbl_per_relationship" />
+          <NavigationProperty Name="tbl_permision_detail" Relationship="BeTongModel.FK_tbl_permision_detail_tbl_permision" FromRole="tbl_permision" ToRole="tbl_permision_detail" />
+        </EntityType>
+        <EntityType Name="tbl_permision_detail">
+          <Key>
+            <PropertyRef Name="id_pd" />
+          </Key>
+          <Property Name="id_pd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="code_action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_per" Type="Int32" Nullable="false" />
+          <Property Name="check_action" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbl_permision" Relationship="BeTongModel.FK_tbl_permision_detail_tbl_permision" FromRole="tbl_permision_detail" ToRole="tbl_permision" />
+        </EntityType>
+        <EntityType Name="tbl_user">
+          <Key>
+            <PropertyRef Name="id_user" />
+          </Key>
+          <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_per_relationship" Relationship="BeTongModel.FK_tbl_per_relationship_tbl_user" FromRole="tbl_user" ToRole="tbl_per_relationship" />
+        </EntityType>
+        <EntityType Name="Truck">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TruckNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TruckLoad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Deliverydetail_Delivery">
+          <End Type="BeTongModel.Delivery" Role="Delivery" Multiplicity="0..1" />
+          <End Type="BeTongModel.Deliverydetail" Role="Deliverydetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Deliverydetail">
+              <PropertyRef Name="DeliveryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_per_relationship_tbl_permision">
+          <End Type="BeTongModel.tbl_permision" Role="tbl_permision" Multiplicity="1" />
+          <End Type="BeTongModel.tbl_per_relationship" Role="tbl_per_relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_permision">
+              <PropertyRef Name="id_per" />
+            </Principal>
+            <Dependent Role="tbl_per_relationship">
+              <PropertyRef Name="id_per_rel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_per_relationship_tbl_user">
+          <End Type="BeTongModel.tbl_user" Role="tbl_user" Multiplicity="1" />
+          <End Type="BeTongModel.tbl_per_relationship" Role="tbl_per_relationship" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_user">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="tbl_per_relationship">
+              <PropertyRef Name="id_user_rel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_permision_detail_tbl_permision">
+          <End Type="BeTongModel.tbl_permision" Role="tbl_permision" Multiplicity="1" />
+          <End Type="BeTongModel.tbl_permision_detail" Role="tbl_permision_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_permision">
+              <PropertyRef Name="id_per" />
+            </Principal>
+            <Dependent Role="tbl_permision_detail">
+              <PropertyRef Name="id_per" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BeTongModelStoreContainer" CdmEntityContainer="c">
+          <FunctionImportMapping FunctionImportName="back_up_database" FunctionName="BeTongModel.Store.back_up_database" />
+          <FunctionImportMapping FunctionImportName="insert_Phan_quyen_Permision_detail" FunctionName="BeTongModel.Store.insert_Phan_quyen_Permision_detail" />
+          <FunctionImportMapping FunctionImportName="Restore_database" FunctionName="BeTongModel.Store.Restore_database" />
+          <FunctionImportMapping FunctionImportName="select_check_action_for_login" FunctionName="BeTongModel.Store.select_check_action_for_login" />
+          <FunctionImportMapping FunctionImportName="Select_company" FunctionName="BeTongModel.Store.Select_company">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_company_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Customer" FunctionName="BeTongModel.Store.Select_Customer">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Customer_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Delivery" FunctionName="BeTongModel.Store.Select_Delivery">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Delivery_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+                <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+                <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+                <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+                <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+                <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+                <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+                <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+                <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+                <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+                <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+                <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+                <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+                <ScalarProperty Name="Humidity1" ColumnName="Humidity1" />
+                <ScalarProperty Name="Humidity2" ColumnName="Humidity2" />
+                <ScalarProperty Name="Humidity3" ColumnName="Humidity3" />
+                <ScalarProperty Name="Humidity4" ColumnName="Humidity4" />
+                <ScalarProperty Name="AggActual1" ColumnName="AggActual1" />
+                <ScalarProperty Name="AggActual2" ColumnName="AggActual2" />
+                <ScalarProperty Name="AggActual3" ColumnName="AggActual3" />
+                <ScalarProperty Name="AggActual4" ColumnName="AggActual4" />
+                <ScalarProperty Name="CementActual1" ColumnName="CementActual1" />
+                <ScalarProperty Name="CementActual2" ColumnName="CementActual2" />
+                <ScalarProperty Name="CementActual3" ColumnName="CementActual3" />
+                <ScalarProperty Name="WaterActual" ColumnName="WaterActual" />
+                <ScalarProperty Name="AddActual1" ColumnName="AddActual1" />
+                <ScalarProperty Name="AddActual2" ColumnName="AddActual2" />
+                <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Delivery_detail" FunctionName="BeTongModel.Store.Select_Delivery_detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Delivery_detail_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="AggWeight1" ColumnName="AggWeight1" />
+                <ScalarProperty Name="AggWeight2" ColumnName="AggWeight2" />
+                <ScalarProperty Name="AggWeight3" ColumnName="AggWeight3" />
+                <ScalarProperty Name="AggWeight4" ColumnName="AggWeight4" />
+                <ScalarProperty Name="CementWeight1" ColumnName="CementWeight1" />
+                <ScalarProperty Name="CementWeight2" ColumnName="CementWeight2" />
+                <ScalarProperty Name="CementWeight3" ColumnName="CementWeight3" />
+                <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+                <ScalarProperty Name="AddWeight1" ColumnName="AddWeight1" />
+                <ScalarProperty Name="AddWeight2" ColumnName="AddWeight2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Driver" FunctionName="BeTongModel.Store.Select_Driver">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Driver_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_IDuser_with_username_pass" FunctionName="BeTongModel.Store.Select_IDuser_with_username_pass" />
+          <FunctionImportMapping FunctionImportName="Select_name" FunctionName="BeTongModel.Store.Select_name">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_name_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AggName1" ColumnName="AggName1" />
+                <ScalarProperty Name="AggName2" ColumnName="AggName2" />
+                <ScalarProperty Name="AggName3" ColumnName="AggName3" />
+                <ScalarProperty Name="AggName4" ColumnName="AggName4" />
+                <ScalarProperty Name="CementName1" ColumnName="CementName1" />
+                <ScalarProperty Name="CementName2" ColumnName="CementName2" />
+                <ScalarProperty Name="CementName3" ColumnName="CementName3" />
+                <ScalarProperty Name="CementName4" ColumnName="CementName4" />
+                <ScalarProperty Name="WaterName" ColumnName="WaterName" />
+                <ScalarProperty Name="AddName1" ColumnName="AddName1" />
+                <ScalarProperty Name="AddName2" ColumnName="AddName2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_Name_action_for_login" FunctionName="BeTongModel.Store.select_Name_action_for_login" />
+          <FunctionImportMapping FunctionImportName="select_Name_permision_for_login" FunctionName="BeTongModel.Store.select_Name_permision_for_login" />
+          <FunctionImportMapping FunctionImportName="Select_PerDetail_DescripionPermision" FunctionName="BeTongModel.Store.Select_PerDetail_DescripionPermision">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_PerDetail_DescripionPermision_Result">
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="check_action" ColumnName="check_action" />
+                <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_permision_decription" FunctionName="BeTongModel.Store.Select_permision_decription">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_permision_decription_Result">
+                <ScalarProperty Name="id_per" ColumnName="id_per" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Phan_quyen_ID" FunctionName="BeTongModel.Store.Select_Phan_quyen_ID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Phan_quyen_ID_Result">
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="check_action" ColumnName="check_action" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Phan_quyen_Permision" FunctionName="BeTongModel.Store.Select_Phan_quyen_Permision">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Phan_quyen_Permision_Result">
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="check_action" ColumnName="check_action" />
+                <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Recipe" FunctionName="BeTongModel.Store.Select_Recipe">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_Recipe_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+                <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+                <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+                <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+                <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+                <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+                <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+                <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+                <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+                <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+                <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_recipe_Id" FunctionName="BeTongModel.Store.Select_recipe_Id">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_recipe_Id_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+                <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+                <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+                <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+                <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+                <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+                <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+                <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+                <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+                <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+                <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_tagaddress" FunctionName="BeTongModel.Store.Select_tagaddress">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_tagaddress_Result">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="typedata" ColumnName="typedata" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_truck" FunctionName="BeTongModel.Store.Select_truck">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_truck_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+                <ScalarProperty Name="TruckLoad" ColumnName="TruckLoad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_User_with_username" FunctionName="BeTongModel.Store.Select_User_with_username">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.Select_User_with_username_Result">
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+                <ScalarProperty Name="name_user" ColumnName="name_user" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Update_permision_relaytionship" FunctionName="BeTongModel.Store.Update_permision_relaytionship" />
+          <FunctionImportMapping FunctionImportName="update_permistion_detail" FunctionName="BeTongModel.Store.update_permistion_detail" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BeTongModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BeTongModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BeTongModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BeTongModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BeTongModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BeTongModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BeTongModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BeTongModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="BeTongModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Configs">
+            <EntityTypeMapping TypeName="BeTongModel.Config">
+              <MappingFragment StoreEntitySet="Config">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="BeTongModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliveries">
+            <EntityTypeMapping TypeName="BeTongModel.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+                <ScalarProperty Name="AddActual2" ColumnName="AddActual2" />
+                <ScalarProperty Name="AddActual1" ColumnName="AddActual1" />
+                <ScalarProperty Name="WaterActual" ColumnName="WaterActual" />
+                <ScalarProperty Name="CementActual3" ColumnName="CementActual3" />
+                <ScalarProperty Name="CementActual2" ColumnName="CementActual2" />
+                <ScalarProperty Name="CementActual1" ColumnName="CementActual1" />
+                <ScalarProperty Name="AggActual4" ColumnName="AggActual4" />
+                <ScalarProperty Name="AggActual3" ColumnName="AggActual3" />
+                <ScalarProperty Name="AggActual2" ColumnName="AggActual2" />
+                <ScalarProperty Name="AggActual1" ColumnName="AggActual1" />
+                <ScalarProperty Name="Humidity4" ColumnName="Humidity4" />
+                <ScalarProperty Name="Humidity3" ColumnName="Humidity3" />
+                <ScalarProperty Name="Humidity2" ColumnName="Humidity2" />
+                <ScalarProperty Name="Humidity1" ColumnName="Humidity1" />
+                <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+                <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+                <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+                <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+                <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+                <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+                <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+                <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+                <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+                <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+                <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+                <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+                <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliverydetails">
+            <EntityTypeMapping TypeName="BeTongModel.Deliverydetail">
+              <MappingFragment StoreEntitySet="Deliverydetail">
+                <ScalarProperty Name="AddWeight2" ColumnName="AddWeight2" />
+                <ScalarProperty Name="AddWeight1" ColumnName="AddWeight1" />
+                <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+                <ScalarProperty Name="CementWeight3" ColumnName="CementWeight3" />
+                <ScalarProperty Name="CementWeight2" ColumnName="CementWeight2" />
+                <ScalarProperty Name="CementWeight1" ColumnName="CementWeight1" />
+                <ScalarProperty Name="AggWeight4" ColumnName="AggWeight4" />
+                <ScalarProperty Name="AggWeight3" ColumnName="AggWeight3" />
+                <ScalarProperty Name="AggWeight2" ColumnName="AggWeight2" />
+                <ScalarProperty Name="AggWeight1" ColumnName="AggWeight1" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Drivers">
+            <EntityTypeMapping TypeName="BeTongModel.Driver">
+              <MappingFragment StoreEntitySet="Driver">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Names">
+            <EntityTypeMapping TypeName="BeTongModel.Name">
+              <MappingFragment StoreEntitySet="Name">
+                <ScalarProperty Name="AddName2" ColumnName="AddName2" />
+                <ScalarProperty Name="AddName1" ColumnName="AddName1" />
+                <ScalarProperty Name="WaterName" ColumnName="WaterName" />
+                <ScalarProperty Name="CementName4" ColumnName="CementName4" />
+                <ScalarProperty Name="CementName3" ColumnName="CementName3" />
+                <ScalarProperty Name="CementName2" ColumnName="CementName2" />
+                <ScalarProperty Name="CementName1" ColumnName="CementName1" />
+                <ScalarProperty Name="AggName4" ColumnName="AggName4" />
+                <ScalarProperty Name="AggName3" ColumnName="AggName3" />
+                <ScalarProperty Name="AggName2" ColumnName="AggName2" />
+                <ScalarProperty Name="AggName1" ColumnName="AggName1" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recipes">
+            <EntityTypeMapping TypeName="BeTongModel.Recipe">
+              <MappingFragment StoreEntitySet="Recipe">
+                <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+                <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+                <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+                <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+                <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+                <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+                <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+                <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+                <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+                <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+                <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BeTongModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TagAddresses">
+            <EntityTypeMapping TypeName="BeTongModel.TagAddress">
+              <MappingFragment StoreEntitySet="TagAddress">
+                <ScalarProperty Name="typedata" ColumnName="typedata" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_per_relationship">
+            <EntityTypeMapping TypeName="BeTongModel.tbl_per_relationship">
+              <MappingFragment StoreEntitySet="tbl_per_relationship">
+                <ScalarProperty Name="suspended" ColumnName="suspended" />
+                <ScalarProperty Name="id_per_rel" ColumnName="id_per_rel" />
+                <ScalarProperty Name="id_user_rel" ColumnName="id_user_rel" />
+                <ScalarProperty Name="id_rel" ColumnName="id_rel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_permision">
+            <EntityTypeMapping TypeName="BeTongModel.tbl_permision">
+              <MappingFragment StoreEntitySet="tbl_permision">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name_per" ColumnName="name_per" />
+                <ScalarProperty Name="id_per" ColumnName="id_per" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_permision_detail">
+            <EntityTypeMapping TypeName="BeTongModel.tbl_permision_detail">
+              <MappingFragment StoreEntitySet="tbl_permision_detail">
+                <ScalarProperty Name="check_action" ColumnName="check_action" />
+                <ScalarProperty Name="id_per" ColumnName="id_per" />
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_user">
+            <EntityTypeMapping TypeName="BeTongModel.tbl_user">
+              <MappingFragment StoreEntitySet="tbl_user">
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="name_user" ColumnName="name_user" />
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trucks">
+            <EntityTypeMapping TypeName="BeTongModel.Truck">
+              <MappingFragment StoreEntitySet="Truck">
+                <ScalarProperty Name="TruckLoad" ColumnName="TruckLoad" />
+                <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

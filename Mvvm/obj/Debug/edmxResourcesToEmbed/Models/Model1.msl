@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BeTongModelStoreContainer" CdmEntityContainer="c">
+    <FunctionImportMapping FunctionImportName="back_up_database" FunctionName="BeTongModel.Store.back_up_database" />
+    <FunctionImportMapping FunctionImportName="insert_Phan_quyen_Permision_detail" FunctionName="BeTongModel.Store.insert_Phan_quyen_Permision_detail" />
+    <FunctionImportMapping FunctionImportName="Restore_database" FunctionName="BeTongModel.Store.Restore_database" />
+    <FunctionImportMapping FunctionImportName="select_check_action_for_login" FunctionName="BeTongModel.Store.select_check_action_for_login" />
+    <FunctionImportMapping FunctionImportName="Select_company" FunctionName="BeTongModel.Store.Select_company">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_company_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Customer" FunctionName="BeTongModel.Store.Select_Customer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Customer_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Delivery" FunctionName="BeTongModel.Store.Select_Delivery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Delivery_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+          <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+          <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+          <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+          <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+          <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+          <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+          <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+          <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+          <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+          <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+          <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+          <ScalarProperty Name="Humidity1" ColumnName="Humidity1" />
+          <ScalarProperty Name="Humidity2" ColumnName="Humidity2" />
+          <ScalarProperty Name="Humidity3" ColumnName="Humidity3" />
+          <ScalarProperty Name="Humidity4" ColumnName="Humidity4" />
+          <ScalarProperty Name="AggActual1" ColumnName="AggActual1" />
+          <ScalarProperty Name="AggActual2" ColumnName="AggActual2" />
+          <ScalarProperty Name="AggActual3" ColumnName="AggActual3" />
+          <ScalarProperty Name="AggActual4" ColumnName="AggActual4" />
+          <ScalarProperty Name="CementActual1" ColumnName="CementActual1" />
+          <ScalarProperty Name="CementActual2" ColumnName="CementActual2" />
+          <ScalarProperty Name="CementActual3" ColumnName="CementActual3" />
+          <ScalarProperty Name="WaterActual" ColumnName="WaterActual" />
+          <ScalarProperty Name="AddActual1" ColumnName="AddActual1" />
+          <ScalarProperty Name="AddActual2" ColumnName="AddActual2" />
+          <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Delivery_detail" FunctionName="BeTongModel.Store.Select_Delivery_detail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Delivery_detail_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="AggWeight1" ColumnName="AggWeight1" />
+          <ScalarProperty Name="AggWeight2" ColumnName="AggWeight2" />
+          <ScalarProperty Name="AggWeight3" ColumnName="AggWeight3" />
+          <ScalarProperty Name="AggWeight4" ColumnName="AggWeight4" />
+          <ScalarProperty Name="CementWeight1" ColumnName="CementWeight1" />
+          <ScalarProperty Name="CementWeight2" ColumnName="CementWeight2" />
+          <ScalarProperty Name="CementWeight3" ColumnName="CementWeight3" />
+          <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+          <ScalarProperty Name="AddWeight1" ColumnName="AddWeight1" />
+          <ScalarProperty Name="AddWeight2" ColumnName="AddWeight2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Driver" FunctionName="BeTongModel.Store.Select_Driver">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Driver_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_IDuser_with_username_pass" FunctionName="BeTongModel.Store.Select_IDuser_with_username_pass" />
+    <FunctionImportMapping FunctionImportName="Select_name" FunctionName="BeTongModel.Store.Select_name">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_name_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AggName1" ColumnName="AggName1" />
+          <ScalarProperty Name="AggName2" ColumnName="AggName2" />
+          <ScalarProperty Name="AggName3" ColumnName="AggName3" />
+          <ScalarProperty Name="AggName4" ColumnName="AggName4" />
+          <ScalarProperty Name="CementName1" ColumnName="CementName1" />
+          <ScalarProperty Name="CementName2" ColumnName="CementName2" />
+          <ScalarProperty Name="CementName3" ColumnName="CementName3" />
+          <ScalarProperty Name="CementName4" ColumnName="CementName4" />
+          <ScalarProperty Name="WaterName" ColumnName="WaterName" />
+          <ScalarProperty Name="AddName1" ColumnName="AddName1" />
+          <ScalarProperty Name="AddName2" ColumnName="AddName2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="select_Name_action_for_login" FunctionName="BeTongModel.Store.select_Name_action_for_login" />
+    <FunctionImportMapping FunctionImportName="select_Name_permision_for_login" FunctionName="BeTongModel.Store.select_Name_permision_for_login" />
+    <FunctionImportMapping FunctionImportName="Select_PerDetail_DescripionPermision" FunctionName="BeTongModel.Store.Select_PerDetail_DescripionPermision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_PerDetail_DescripionPermision_Result">
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="check_action" ColumnName="check_action" />
+          <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_permision_decription" FunctionName="BeTongModel.Store.Select_permision_decription">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_permision_decription_Result">
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Phan_quyen_ID" FunctionName="BeTongModel.Store.Select_Phan_quyen_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Phan_quyen_ID_Result">
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="check_action" ColumnName="check_action" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Phan_quyen_Permision" FunctionName="BeTongModel.Store.Select_Phan_quyen_Permision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Phan_quyen_Permision_Result">
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="check_action" ColumnName="check_action" />
+          <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Recipe" FunctionName="BeTongModel.Store.Select_Recipe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_Recipe_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+          <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+          <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+          <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+          <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+          <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+          <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+          <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+          <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+          <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+          <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_recipe_Id" FunctionName="BeTongModel.Store.Select_recipe_Id">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_recipe_Id_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+          <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+          <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+          <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+          <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+          <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+          <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+          <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+          <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+          <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+          <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_tagaddress" FunctionName="BeTongModel.Store.Select_tagaddress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_tagaddress_Result">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="typedata" ColumnName="typedata" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_truck" FunctionName="BeTongModel.Store.Select_truck">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_truck_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+          <ScalarProperty Name="TruckLoad" ColumnName="TruckLoad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_User_with_username" FunctionName="BeTongModel.Store.Select_User_with_username">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.Select_User_with_username_Result">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="name_user" ColumnName="name_user" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_permision_relaytionship" FunctionName="BeTongModel.Store.Update_permision_relaytionship" />
+    <FunctionImportMapping FunctionImportName="update_permistion_detail" FunctionName="BeTongModel.Store.update_permistion_detail" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BeTongModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BeTongModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BeTongModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BeTongModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BeTongModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BeTongModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BeTongModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BeTongModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="BeTongModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="BeTongModel.Config">
+        <MappingFragment StoreEntitySet="Config">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="BeTongModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deliveries">
+      <EntityTypeMapping TypeName="BeTongModel.Delivery">
+        <MappingFragment StoreEntitySet="Delivery">
+          <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+          <ScalarProperty Name="AddActual2" ColumnName="AddActual2" />
+          <ScalarProperty Name="AddActual1" ColumnName="AddActual1" />
+          <ScalarProperty Name="WaterActual" ColumnName="WaterActual" />
+          <ScalarProperty Name="CementActual3" ColumnName="CementActual3" />
+          <ScalarProperty Name="CementActual2" ColumnName="CementActual2" />
+          <ScalarProperty Name="CementActual1" ColumnName="CementActual1" />
+          <ScalarProperty Name="AggActual4" ColumnName="AggActual4" />
+          <ScalarProperty Name="AggActual3" ColumnName="AggActual3" />
+          <ScalarProperty Name="AggActual2" ColumnName="AggActual2" />
+          <ScalarProperty Name="AggActual1" ColumnName="AggActual1" />
+          <ScalarProperty Name="Humidity4" ColumnName="Humidity4" />
+          <ScalarProperty Name="Humidity3" ColumnName="Humidity3" />
+          <ScalarProperty Name="Humidity2" ColumnName="Humidity2" />
+          <ScalarProperty Name="Humidity1" ColumnName="Humidity1" />
+          <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+          <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+          <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+          <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+          <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+          <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+          <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+          <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+          <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+          <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+          <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+          <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deliverydetails">
+      <EntityTypeMapping TypeName="BeTongModel.Deliverydetail">
+        <MappingFragment StoreEntitySet="Deliverydetail">
+          <ScalarProperty Name="AddWeight2" ColumnName="AddWeight2" />
+          <ScalarProperty Name="AddWeight1" ColumnName="AddWeight1" />
+          <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+          <ScalarProperty Name="CementWeight3" ColumnName="CementWeight3" />
+          <ScalarProperty Name="CementWeight2" ColumnName="CementWeight2" />
+          <ScalarProperty Name="CementWeight1" ColumnName="CementWeight1" />
+          <ScalarProperty Name="AggWeight4" ColumnName="AggWeight4" />
+          <ScalarProperty Name="AggWeight3" ColumnName="AggWeight3" />
+          <ScalarProperty Name="AggWeight2" ColumnName="AggWeight2" />
+          <ScalarProperty Name="AggWeight1" ColumnName="AggWeight1" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="BeTongModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Names">
+      <EntityTypeMapping TypeName="BeTongModel.Name">
+        <MappingFragment StoreEntitySet="Name">
+          <ScalarProperty Name="AddName2" ColumnName="AddName2" />
+          <ScalarProperty Name="AddName1" ColumnName="AddName1" />
+          <ScalarProperty Name="WaterName" ColumnName="WaterName" />
+          <ScalarProperty Name="CementName4" ColumnName="CementName4" />
+          <ScalarProperty Name="CementName3" ColumnName="CementName3" />
+          <ScalarProperty Name="CementName2" ColumnName="CementName2" />
+          <ScalarProperty Name="CementName1" ColumnName="CementName1" />
+          <ScalarProperty Name="AggName4" ColumnName="AggName4" />
+          <ScalarProperty Name="AggName3" ColumnName="AggName3" />
+          <ScalarProperty Name="AggName2" ColumnName="AggName2" />
+          <ScalarProperty Name="AggName1" ColumnName="AggName1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipes">
+      <EntityTypeMapping TypeName="BeTongModel.Recipe">
+        <MappingFragment StoreEntitySet="Recipe">
+          <ScalarProperty Name="SlumpRate" ColumnName="SlumpRate" />
+          <ScalarProperty Name="AddRate2" ColumnName="AddRate2" />
+          <ScalarProperty Name="AddRate1" ColumnName="AddRate1" />
+          <ScalarProperty Name="WaterRate" ColumnName="WaterRate" />
+          <ScalarProperty Name="CementRate3" ColumnName="CementRate3" />
+          <ScalarProperty Name="CementRate2" ColumnName="CementRate2" />
+          <ScalarProperty Name="CementRate1" ColumnName="CementRate1" />
+          <ScalarProperty Name="AggRate4" ColumnName="AggRate4" />
+          <ScalarProperty Name="AggRate3" ColumnName="AggRate3" />
+          <ScalarProperty Name="AggRate2" ColumnName="AggRate2" />
+          <ScalarProperty Name="AggRate1" ColumnName="AggRate1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BeTongModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TagAddresses">
+      <EntityTypeMapping TypeName="BeTongModel.TagAddress">
+        <MappingFragment StoreEntitySet="TagAddress">
+          <ScalarProperty Name="typedata" ColumnName="typedata" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_per_relationship">
+      <EntityTypeMapping TypeName="BeTongModel.tbl_per_relationship">
+        <MappingFragment StoreEntitySet="tbl_per_relationship">
+          <ScalarProperty Name="suspended" ColumnName="suspended" />
+          <ScalarProperty Name="id_per_rel" ColumnName="id_per_rel" />
+          <ScalarProperty Name="id_user_rel" ColumnName="id_user_rel" />
+          <ScalarProperty Name="id_rel" ColumnName="id_rel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_permision">
+      <EntityTypeMapping TypeName="BeTongModel.tbl_permision">
+        <MappingFragment StoreEntitySet="tbl_permision">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name_per" ColumnName="name_per" />
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_permision_detail">
+      <EntityTypeMapping TypeName="BeTongModel.tbl_permision_detail">
+        <MappingFragment StoreEntitySet="tbl_permision_detail">
+          <ScalarProperty Name="check_action" ColumnName="check_action" />
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="id_pd" ColumnName="id_pd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="BeTongModel.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="name_user" ColumnName="name_user" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trucks">
+      <EntityTypeMapping TypeName="BeTongModel.Truck">
+        <MappingFragment StoreEntitySet="Truck">
+          <ScalarProperty Name="TruckLoad" ColumnName="TruckLoad" />
+          <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

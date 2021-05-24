@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BetongModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RecipeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AggRate1" Type="Double" />
+    <Property Name="AggRate2" Type="Double" />
+    <Property Name="AggRate3" Type="Double" />
+    <Property Name="AggRate4" Type="Double" />
+    <Property Name="CementRate1" Type="Double" />
+    <Property Name="CementRate2" Type="Double" />
+    <Property Name="CementRate3" Type="Double" />
+    <Property Name="WaterRate" Type="Double" />
+    <Property Name="AddRate1" Type="Double" />
+    <Property Name="AddRate2" Type="Double" />
+    <Property Name="SlumpRate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Humidity1" Type="Double" />
+    <Property Name="Humidity2" Type="Double" />
+    <Property Name="Humidity3" Type="Double" />
+    <Property Name="Humidity4" Type="Double" />
+    <Property Name="AggActual1" Type="Double" />
+    <Property Name="AggActual2" Type="Double" />
+    <Property Name="AggActual3" Type="Double" />
+    <Property Name="AggActual4" Type="Double" />
+    <Property Name="CementActual1" Type="Double" />
+    <Property Name="CementActual2" Type="Double" />
+    <Property Name="CementActual3" Type="Double" />
+    <Property Name="WaterActual" Type="Double" />
+    <Property Name="AddActual1" Type="Double" />
+    <Property Name="AddActual2" Type="Double" />
+    <Property Name="TruckNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DriverName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="Double" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="WorkPlace" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Deliverydetails" Relationship="Self.FK_Deliverydetail_Delivery" FromRole="Delivery" ToRole="Deliverydetail" />
+  </EntityType>
+  <EntityType Name="Deliverydetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeliveryID" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="OrderNumber" Type="Int32" />
+    <Property Name="AggWeight1" Type="Double" />
+    <Property Name="AggWeight2" Type="Double" />
+    <Property Name="AggWeight3" Type="Double" />
+    <Property Name="AggWeight4" Type="Double" />
+    <Property Name="CementWeight1" Type="Double" />
+    <Property Name="CementWeight2" Type="Double" />
+    <Property Name="CementWeight3" Type="Double" />
+    <Property Name="WaterWeight" Type="Double" />
+    <Property Name="AddWeight1" Type="Double" />
+    <Property Name="AddWeight2" Type="Double" />
+    <NavigationProperty Name="Delivery" Relationship="Self.FK_Deliverydetail_Delivery" FromRole="Deliverydetail" ToRole="Delivery" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="BirthDay" Type="DateTime" Precision="0" />
+    <Property Name="Number" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Name">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AggName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AggName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AggName3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AggName4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CementName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CementName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CementName3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CementName4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Recipe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AggRate1" Type="Double" />
+    <Property Name="AggRate2" Type="Double" />
+    <Property Name="AggRate3" Type="Double" />
+    <Property Name="AggRate4" Type="Double" />
+    <Property Name="CementRate1" Type="Double" />
+    <Property Name="CementRate2" Type="Double" />
+    <Property Name="CementRate3" Type="Double" />
+    <Property Name="WaterRate" Type="Double" />
+    <Property Name="AddRate1" Type="Double" />
+    <Property Name="AddRate2" Type="Double" />
+    <Property Name="SlumpRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TagAddress">
+    <Key>
+      <PropertyRef Name="Address" />
+    </Key>
+    <Property Name="Address" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="typedata" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_per_relationship">
+    <Key>
+      <PropertyRef Name="id_rel" />
+    </Key>
+    <Property Name="id_rel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user_rel" Type="Int32" Nullable="false" />
+    <Property Name="id_per_rel" Type="Int32" Nullable="false" />
+    <Property Name="suspended" Type="Boolean" />
+    <NavigationProperty Name="tbl_permision" Relationship="Self.FK_tbl_per_relationship_tbl_permision" FromRole="tbl_per_relationship" ToRole="tbl_permision" />
+    <NavigationProperty Name="tbl_user" Relationship="Self.FK_tbl_per_relationship_tbl_user" FromRole="tbl_per_relationship" ToRole="tbl_user" />
+  </EntityType>
+  <EntityType Name="tbl_permision">
+    <Key>
+      <PropertyRef Name="id_per" />
+    </Key>
+    <Property Name="id_per" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_per" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_per_relationship" Relationship="Self.FK_tbl_per_relationship_tbl_permision" FromRole="tbl_permision" ToRole="tbl_per_relationship" />
+    <NavigationProperty Name="tbl_permision_detail" Relationship="Self.FK_tbl_permision_detail_tbl_permision" FromRole="tbl_permision" ToRole="tbl_permision_detail" />
+  </EntityType>
+  <EntityType Name="tbl_permision_detail">
+    <Key>
+      <PropertyRef Name="id_pd" />
+    </Key>
+    <Property Name="id_pd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="code_action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_per" Type="Int32" Nullable="false" />
+    <Property Name="check_action" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbl_permision" Relationship="Self.FK_tbl_permision_detail_tbl_permision" FromRole="tbl_permision_detail" ToRole="tbl_permision" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_user" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbl_per_relationship" Relationship="Self.FK_tbl_per_relationship_tbl_user" FromRole="tbl_user" ToRole="tbl_per_relationship" />
+  </EntityType>
+  <EntityType Name="Truck">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TruckNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TruckLoad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Deliverydetail_Delivery">
+    <End Role="Delivery" Type="Self.Delivery" Multiplicity="0..1" />
+    <End Role="Deliverydetail" Type="Self.Deliverydetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Delivery">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Deliverydetail">
+        <PropertyRef Name="DeliveryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_per_relationship_tbl_permision">
+    <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+    <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_permision">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="tbl_per_relationship">
+        <PropertyRef Name="id_per_rel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_per_relationship_tbl_user">
+    <End Role="tbl_user" Type="Self.tbl_user" Multiplicity="1" />
+    <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_user">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="tbl_per_relationship">
+        <PropertyRef Name="id_user_rel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_permision_detail_tbl_permision">
+    <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+    <End Role="tbl_permision_detail" Type="Self.tbl_permision_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_permision">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="tbl_permision_detail">
+        <PropertyRef Name="id_per" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BetongEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="Configs" EntityType="Self.Config" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Deliveries" EntityType="Self.Delivery" />
+    <EntitySet Name="Deliverydetails" EntityType="Self.Deliverydetail" />
+    <EntitySet Name="Drivers" EntityType="Self.Driver" />
+    <EntitySet Name="Names" EntityType="Self.Name" />
+    <EntitySet Name="Recipes" EntityType="Self.Recipe" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TagAddresses" EntityType="Self.TagAddress" />
+    <EntitySet Name="tbl_per_relationship" EntityType="Self.tbl_per_relationship" />
+    <EntitySet Name="tbl_permision" EntityType="Self.tbl_permision" />
+    <EntitySet Name="tbl_permision_detail" EntityType="Self.tbl_permision_detail" />
+    <EntitySet Name="tbl_user" EntityType="Self.tbl_user" />
+    <EntitySet Name="Trucks" EntityType="Self.Truck" />
+    <AssociationSet Name="FK_Deliverydetail_Delivery" Association="Self.FK_Deliverydetail_Delivery">
+      <End Role="Delivery" EntitySet="Deliveries" />
+      <End Role="Deliverydetail" EntitySet="Deliverydetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_per_relationship_tbl_permision" Association="Self.FK_tbl_per_relationship_tbl_permision">
+      <End Role="tbl_permision" EntitySet="tbl_permision" />
+      <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_per_relationship_tbl_user" Association="Self.FK_tbl_per_relationship_tbl_user">
+      <End Role="tbl_user" EntitySet="tbl_user" />
+      <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_permision_detail_tbl_permision" Association="Self.FK_tbl_permision_detail_tbl_permision">
+      <End Role="tbl_permision" EntitySet="tbl_permision" />
+      <End Role="tbl_permision_detail" EntitySet="tbl_permision_detail" />
+    </AssociationSet>
+    <FunctionImport Name="back_up_database">
+      <Parameter Name="namefile" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insert_Phan_quyen_Permision_detail">
+      <Parameter Name="id_per" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Restore_database">
+      <Parameter Name="namefile" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="select_check_action_for_login" ReturnType="Collection(Boolean)">
+      <Parameter Name="Id_user" Mode="In" Type="Int32" />
+      <Parameter Name="licened" Mode="In" Type="Boolean" />
+      <Parameter Name="code_action" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Select_company" ReturnType="Collection(BetongModel.Select_company_Result)" />
+    <FunctionImport Name="Select_Customer" ReturnType="Collection(BetongModel.Select_Customer_Result)" />
+    <FunctionImport Name="Select_Delivery" ReturnType="Collection(BetongModel.Select_Delivery_Result)" />
+    <FunctionImport Name="Select_Delivery_detail" ReturnType="Collection(BetongModel.Select_Delivery_detail_Result)" />
+    <FunctionImport Name="Select_Driver" ReturnType="Collection(BetongModel.Select_Driver_Result)" />
+    <FunctionImport Name="Select_IDuser_with_username_pass" ReturnType="Collection(Int32)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Select_name" ReturnType="Collection(BetongModel.Select_name_Result)" />
+    <FunctionImport Name="select_Name_action_for_login" ReturnType="Collection(String)">
+      <Parameter Name="User_name" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="licened" Mode="In" Type="Boolean" />
+      <Parameter Name="check_action" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="select_Name_permision_for_login" ReturnType="Collection(String)">
+      <Parameter Name="Id_user" Mode="In" Type="Int32" />
+      <Parameter Name="licened" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Select_PerDetail_DescripionPermision" ReturnType="Collection(BetongModel.Select_PerDetail_DescripionPermision_Result)">
+      <Parameter Name="description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Select_permision_decription" ReturnType="Collection(BetongModel.Select_permision_decription_Result)" />
+    <FunctionImport Name="Select_Phan_quyen_ID" ReturnType="Collection(BetongModel.Select_Phan_quyen_ID_Result)">
+      <Parameter Name="Id_user" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Select_Phan_quyen_Permision" ReturnType="Collection(BetongModel.Select_Phan_quyen_Permision_Result)">
+      <Parameter Name="permision" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Select_Recipe" ReturnType="Collection(BetongModel.Select_Recipe_Result)" />
+    <FunctionImport Name="Select_recipe_Id" ReturnType="Collection(BetongModel.Select_recipe_Id_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Select_tagaddress" ReturnType="Collection(BetongModel.Select_tagaddress_Result)" />
+    <FunctionImport Name="Select_truck" ReturnType="Collection(BetongModel.Select_truck_Result)" />
+    <FunctionImport Name="Select_User_with_username" ReturnType="Collection(BetongModel.Select_User_with_username_Result)">
+      <Parameter Name="username_" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BetongModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BetongModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="Update_permision_relaytionship">
+      <Parameter Name="description" Mode="In" Type="String" />
+      <Parameter Name="id_user" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="update_permistion_detail">
+      <Parameter Name="id_pd" Mode="In" Type="Int32" />
+      <Parameter Name="name_action" Mode="In" Type="String" />
+      <Parameter Name="check_action" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Select_company_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Select_Customer_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Select_Delivery_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CompanyAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CompanyPhoneNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerPhoneNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RecipeName" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="AggRate1" Nullable="true" />
+    <Property Type="Double" Name="AggRate2" Nullable="true" />
+    <Property Type="Double" Name="AggRate3" Nullable="true" />
+    <Property Type="Double" Name="AggRate4" Nullable="true" />
+    <Property Type="Double" Name="CementRate1" Nullable="true" />
+    <Property Type="Double" Name="CementRate2" Nullable="true" />
+    <Property Type="Double" Name="CementRate3" Nullable="true" />
+    <Property Type="Double" Name="WaterRate" Nullable="true" />
+    <Property Type="Double" Name="AddRate1" Nullable="true" />
+    <Property Type="Double" Name="AddRate2" Nullable="true" />
+    <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="Humidity1" Nullable="true" />
+    <Property Type="Double" Name="Humidity2" Nullable="true" />
+    <Property Type="Double" Name="Humidity3" Nullable="true" />
+    <Property Type="Double" Name="Humidity4" Nullable="true" />
+    <Property Type="Double" Name="AggActual1" Nullable="true" />
+    <Property Type="Double" Name="AggActual2" Nullable="true" />
+    <Property Type="Double" Name="AggActual3" Nullable="true" />
+    <Property Type="Double" Name="AggActual4" Nullable="true" />
+    <Property Type="Double" Name="CementActual1" Nullable="true" />
+    <Property Type="Double" Name="CementActual2" Nullable="true" />
+    <Property Type="Double" Name="CementActual3" Nullable="true" />
+    <Property Type="Double" Name="WaterActual" Nullable="true" />
+    <Property Type="Double" Name="AddActual1" Nullable="true" />
+    <Property Type="Double" Name="AddActual2" Nullable="true" />
+    <Property Type="String" Name="TruckNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="Unit" Nullable="true" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="WorkPlace" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Select_Delivery_detail_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="DeliveryID" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+    <Property Type="Double" Name="AggWeight1" Nullable="true" />
+    <Property Type="Double" Name="AggWeight2" Nullable="true" />
+    <Property Type="Double" Name="AggWeight3" Nullable="true" />
+    <Property Type="Double" Name="AggWeight4" Nullable="true" />
+    <Property Type="Double" Name="CementWeight1" Nullable="true" />
+    <Property Type="Double" Name="CementWeight2" Nullable="true" />
+    <Property Type="Double" Name="CementWeight3" Nullable="true" />
+    <Property Type="Double" Name="WaterWeight" Nullable="true" />
+    <Property Type="Double" Name="AddWeight1" Nullable="true" />
+    <Property Type="Double" Name="AddWeight2" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Select_Driver_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+    <Property Type="String" Name="Number" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="Select_name_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="AggName1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AggName2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AggName3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AggName4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CementName1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CementName2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CementName3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CementName4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WaterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AddName1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AddName2" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Select_PerDetail_DescripionPermision_Result">
+    <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="check_action" Nullable="false" />
+    <Property Type="Int32" Name="id_pd" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Select_permision_decription_Result">
+    <Property Type="Int32" Name="id_per" Nullable="false" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Select_Phan_quyen_ID_Result">
+    <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="check_action" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Select_Phan_quyen_Permision_Result">
+    <Property Type="String" Name="name_action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="code_action" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="check_action" Nullable="false" />
+    <Property Type="Int32" Name="id_pd" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Select_Recipe_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="AggRate1" Nullable="true" />
+    <Property Type="Double" Name="AggRate2" Nullable="true" />
+    <Property Type="Double" Name="AggRate3" Nullable="true" />
+    <Property Type="Double" Name="AggRate4" Nullable="true" />
+    <Property Type="Double" Name="CementRate1" Nullable="true" />
+    <Property Type="Double" Name="CementRate2" Nullable="true" />
+    <Property Type="Double" Name="CementRate3" Nullable="true" />
+    <Property Type="Double" Name="WaterRate" Nullable="true" />
+    <Property Type="Double" Name="AddRate1" Nullable="true" />
+    <Property Type="Double" Name="AddRate2" Nullable="true" />
+    <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Select_recipe_Id_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="AggRate1" Nullable="true" />
+    <Property Type="Double" Name="AggRate2" Nullable="true" />
+    <Property Type="Double" Name="AggRate3" Nullable="true" />
+    <Property Type="Double" Name="AggRate4" Nullable="true" />
+    <Property Type="Double" Name="CementRate1" Nullable="true" />
+    <Property Type="Double" Name="CementRate2" Nullable="true" />
+    <Property Type="Double" Name="CementRate3" Nullable="true" />
+    <Property Type="Double" Name="WaterRate" Nullable="true" />
+    <Property Type="Double" Name="AddRate1" Nullable="true" />
+    <Property Type="Double" Name="AddRate2" Nullable="true" />
+    <Property Type="String" Name="SlumpRate" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Select_tagaddress_Result">
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="typedata" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="Select_truck_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="TruckNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TruckLoad" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="Select_User_with_username_Result">
+    <Property Type="Int32" Name="id_user" Nullable="false" />
+    <Property Type="String" Name="name_user" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="user_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="pass" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

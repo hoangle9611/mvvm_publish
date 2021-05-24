@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="848471c15fed490eb69363cb8f1063ed" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="BeTongModel.Company" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="BeTongModel.Config" Width="1.5" PointX="7.75" PointY="1.875" />
+        <EntityTypeShape EntityType="BeTongModel.Customer" Width="1.5" PointX="2.75" PointY="9.875" />
+        <EntityTypeShape EntityType="BeTongModel.Delivery" Width="1.5" PointX="5.75" PointY="2.375" />
+        <EntityTypeShape EntityType="BeTongModel.Deliverydetail" Width="1.5" PointX="8" PointY="4.75" />
+        <EntityTypeShape EntityType="BeTongModel.Driver" Width="1.5" PointX="7.75" PointY="9.875" />
+        <EntityTypeShape EntityType="BeTongModel.Name" Width="1.5" PointX="9.75" PointY="9.875" />
+        <EntityTypeShape EntityType="BeTongModel.Recipe" Width="1.5" PointX="10.75" PointY="1.875" />
+        <EntityTypeShape EntityType="BeTongModel.sysdiagram" Width="1.5" PointX="4.75" PointY="11.875" />
+        <EntityTypeShape EntityType="BeTongModel.TagAddress" Width="1.5" PointX="10.75" PointY="6.875" />
+        <EntityTypeShape EntityType="BeTongModel.tbl_per_relationship" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="BeTongModel.tbl_permision" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BeTongModel.tbl_permision_detail" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="BeTongModel.tbl_user" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BeTongModel.Truck" Width="1.5" PointX="0.75" PointY="12.875" />
+        <AssociationConnector Association="BeTongModel.FK_Deliverydetail_Delivery" />
+        <AssociationConnector Association="BeTongModel.FK_tbl_per_relationship_tbl_permision" />
+        <AssociationConnector Association="BeTongModel.FK_tbl_per_relationship_tbl_user" />
+        <AssociationConnector Association="BeTongModel.FK_tbl_permision_detail_tbl_permision" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BeTongModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="200" />
+    <Property Name="Address" Type="nchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="nchar" MaxLength="20" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="200" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="CompanyPhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="200" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="CustomerPhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="RecipeName" Type="nvarchar" MaxLength="20" />
+    <Property Name="AggRate1" Type="float" />
+    <Property Name="AggRate2" Type="float" />
+    <Property Name="AggRate3" Type="float" />
+    <Property Name="AggRate4" Type="float" />
+    <Property Name="CementRate1" Type="float" />
+    <Property Name="CementRate2" Type="float" />
+    <Property Name="CementRate3" Type="float" />
+    <Property Name="WaterRate" Type="float" />
+    <Property Name="AddRate1" Type="float" />
+    <Property Name="AddRate2" Type="float" />
+    <Property Name="SlumpRate" Type="nvarchar" MaxLength="20" />
+    <Property Name="Humidity1" Type="float" />
+    <Property Name="Humidity2" Type="float" />
+    <Property Name="Humidity3" Type="float" />
+    <Property Name="Humidity4" Type="float" />
+    <Property Name="AggActual1" Type="float" />
+    <Property Name="AggActual2" Type="float" />
+    <Property Name="AggActual3" Type="float" />
+    <Property Name="AggActual4" Type="float" />
+    <Property Name="CementActual1" Type="float" />
+    <Property Name="CementActual2" Type="float" />
+    <Property Name="CementActual3" Type="float" />
+    <Property Name="WaterActual" Type="float" />
+    <Property Name="AddActual1" Type="float" />
+    <Property Name="AddActual2" Type="float" />
+    <Property Name="TruckNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit" Type="float" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="WorkPlace" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Deliverydetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeliveryID" Type="int" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="OrderNumber" Type="int" />
+    <Property Name="AggWeight1" Type="float" />
+    <Property Name="AggWeight2" Type="float" />
+    <Property Name="AggWeight3" Type="float" />
+    <Property Name="AggWeight4" Type="float" />
+    <Property Name="CementWeight1" Type="float" />
+    <Property Name="CementWeight2" Type="float" />
+    <Property Name="CementWeight3" Type="float" />
+    <Property Name="WaterWeight" Type="float" />
+    <Property Name="AddWeight1" Type="float" />
+    <Property Name="AddWeight2" Type="float" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="50" />
+    <Property Name="BirthDay" Type="date" />
+    <Property Name="Number" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Name">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AggName1" Type="nvarchar" MaxLength="50" />
+    <Property Name="AggName2" Type="nvarchar" MaxLength="50" />
+    <Property Name="AggName3" Type="nvarchar" MaxLength="50" />
+    <Property Name="AggName4" Type="nvarchar" MaxLength="50" />
+    <Property Name="CementName1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CementName2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CementName3" Type="nvarchar" MaxLength="50" />
+    <Property Name="CementName4" Type="nvarchar" MaxLength="50" />
+    <Property Name="WaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddName1" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddName2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Recipe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="AggRate1" Type="float" />
+    <Property Name="AggRate2" Type="float" />
+    <Property Name="AggRate3" Type="float" />
+    <Property Name="AggRate4" Type="float" />
+    <Property Name="CementRate1" Type="float" />
+    <Property Name="CementRate2" Type="float" />
+    <Property Name="CementRate3" Type="float" />
+    <Property Name="WaterRate" Type="float" />
+    <Property Name="AddRate1" Type="float" />
+    <Property Name="AddRate2" Type="float" />
+    <Property Name="SlumpRate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TagAddress">
+    <Key>
+      <PropertyRef Name="Address" />
+    </Key>
+    <Property Name="Address" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Note" Type="nchar" MaxLength="30" />
+    <Property Name="typedata" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_per_relationship">
+    <Key>
+      <PropertyRef Name="id_rel" />
+    </Key>
+    <Property Name="id_rel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_user_rel" Type="int" Nullable="false" />
+    <Property Name="id_per_rel" Type="int" Nullable="false" />
+    <Property Name="suspended" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_permision">
+    <Key>
+      <PropertyRef Name="id_per" />
+    </Key>
+    <Property Name="id_per" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_per" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_permision_detail">
+    <Key>
+      <PropertyRef Name="id_pd" />
+    </Key>
+    <Property Name="id_pd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_action" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="code_action" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_per" Type="int" Nullable="false" />
+    <Property Name="check_action" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_user" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Truck">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TruckNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="TruckLoad" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_Deliverydetail_Delivery">
+    <End Role="Delivery" Type="Self.Delivery" Multiplicity="0..1" />
+    <End Role="Deliverydetail" Type="Self.Deliverydetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Delivery">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Deliverydetail">
+        <PropertyRef Name="DeliveryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_per_relationship_tbl_permision">
+    <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+    <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_permision">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="tbl_per_relationship">
+        <PropertyRef Name="id_per_rel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_per_relationship_tbl_user">
+    <End Role="tbl_user" Type="Self.tbl_user" Multiplicity="1" />
+    <End Role="tbl_per_relationship" Type="Self.tbl_per_relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_user">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="tbl_per_relationship">
+        <PropertyRef Name="id_user_rel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_permision_detail_tbl_permision">
+    <End Role="tbl_permision" Type="Self.tbl_permision" Multiplicity="1" />
+    <End Role="tbl_permision_detail" Type="Self.tbl_permision_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_permision">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="tbl_permision_detail">
+        <PropertyRef Name="id_per" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="back_up_database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="namefile" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="insert_Phan_quyen_Permision_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_per" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Restore_database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="namefile" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="select_check_action_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id_user" Type="int" Mode="In" />
+    <Parameter Name="licened" Type="bit" Mode="In" />
+    <Parameter Name="code_action" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Select_company" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_Delivery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_Delivery_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_Driver" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_IDuser_with_username_pass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Select_name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="select_Name_action_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="User_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="licened" Type="bit" Mode="In" />
+    <Parameter Name="check_action" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="select_Name_permision_for_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id_user" Type="int" Mode="In" />
+    <Parameter Name="licened" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Select_PerDetail_DescripionPermision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="description" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Select_permision_decription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_Phan_quyen_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id_user" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Select_Phan_quyen_Permision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="permision" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Select_Recipe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_recipe_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Select_tagaddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_truck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Select_User_with_username" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username_" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Update_permision_relaytionship" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="description" Type="nvarchar" Mode="In" />
+    <Parameter Name="id_user" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="update_permistion_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_pd" Type="int" Mode="In" />
+    <Parameter Name="name_action" Type="nvarchar" Mode="In" />
+    <Parameter Name="check_action" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="BeTongModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Config" EntityType="Self.Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deliverydetail" EntityType="Self.Deliverydetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Name" EntityType="Self.Name" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recipe" EntityType="Self.Recipe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TagAddress" EntityType="Self.TagAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_per_relationship" EntityType="Self.tbl_per_relationship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_permision" EntityType="Self.tbl_permision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_permision_detail" EntityType="Self.tbl_permision_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Truck" EntityType="Self.Truck" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Deliverydetail_Delivery" Association="Self.FK_Deliverydetail_Delivery">
+      <End Role="Delivery" EntitySet="Delivery" />
+      <End Role="Deliverydetail" EntitySet="Deliverydetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_per_relationship_tbl_permision" Association="Self.FK_tbl_per_relationship_tbl_permision">
+      <End Role="tbl_permision" EntitySet="tbl_permision" />
+      <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_per_relationship_tbl_user" Association="Self.FK_tbl_per_relationship_tbl_user">
+      <End Role="tbl_user" EntitySet="tbl_user" />
+      <End Role="tbl_per_relationship" EntitySet="tbl_per_relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_permision_detail_tbl_permision" Association="Self.FK_tbl_permision_detail_tbl_permision">
+      <End Role="tbl_permision" EntitySet="tbl_permision" />
+      <End Role="tbl_permision_detail" EntitySet="tbl_permision_detail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

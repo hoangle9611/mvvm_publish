@@ -1,0 +1,200 @@
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Mvvm.exe.config
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Mvvm.exe
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Mvvm.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Autofac.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\CommonServiceLocator.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Mvvm.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Printing.v19.2.Core.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Controls.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Core.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.Core.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignColors.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.Desktop.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MyControlElements.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Notifications.Wpf.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ToastNotifications.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ToastNotifications.Messages.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Images.v19.2.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MyControlElements.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Notifications.Wpf.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Autofac.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Mvvm.v19.2.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Printing.v19.2.Core.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Controls.v19.2.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Core.v19.2.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.Core.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignColors.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Printing.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Controls.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Controls.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Controls.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Controls.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Core.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Core.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Core.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Core.v19.2.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csprojAssemblyReference.cache
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\frmpopup.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\MainWindow.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\App.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm_Content.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm_MarkupCompile.cache
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm_MarkupCompile.lref
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\App.baml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Resource\ResourceXAML.baml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\frmpopup.baml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\MainWindow.baml
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.g.resources
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.Properties.Resources.resources
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.GenerateResource.cache
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.exe.licenses
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.CoreCompileInputs.cache
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.CopyComplete
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.exe
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Mvvm.pdb
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\Window1.g.cs
+C:\Users\LE NA\source\repos\Mvvm\Mvvm\obj\Debug\Views\Window1.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csprojAssemblyReference.cache
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\frmpopup.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\Window1.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\App.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm_Content.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm_MarkupCompile.cache
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm_MarkupCompile.lref
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.exe
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\MainWindow.g.cs
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Mvvm.exe.config
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Mvvm.exe
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Mvvm.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Autofac.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\CommonServiceLocator.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Data.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Mvvm.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Printing.v19.2.Core.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Controls.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Core.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.Core.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.SqlServer.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignColors.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.Desktop.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MyControlElements.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\System.ValueTuple.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ToastNotifications.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ToastNotifications.Messages.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Images.v19.2.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MyControlElements.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Autofac.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Data.v19.2.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Mvvm.v19.2.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Printing.v19.2.Core.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Controls.v19.2.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Core.v19.2.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Xpf.Grid.v19.2.Core.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\EntityFramework.SqlServer.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignColors.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.Mvvm.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Autofac.Wpf.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.pdb
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\Prism.Wpf.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\System.ValueTuple.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Printing.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Controls.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Controls.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Controls.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Controls.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Core.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Core.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Core.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Core.v19.2.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Xpf.Grid.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\App.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Resource\ResourceXAML.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\frmpopup.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\MainWindow.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Views\Window1.baml
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.g.resources
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.Properties.Resources.resources
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.GenerateResource.cache
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.exe.licenses
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.CoreCompileInputs.cache
+E:\tu may cua na\BeNa\repos\Mvvm\Mvvm\obj\Debug\Mvvm.csproj.CopyComplete
